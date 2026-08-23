@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
+  <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
+  <!-- Docsify Theme -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
   
   <style>
@@ -23,74 +25,79 @@
     }
 
     body {
-      background-color: #0b0b0e !important;
-      color: #e2e8f0 !important;
+      background-color: #0d0d12 !important;
+      color: #f1f5f9 !important;
     }
 
-    /* Sidebar GitBook Style */
+    /* Sidebar Styling */
     .sidebar {
-      background-color: #121217 !important;
-      border-right: 1px solid #1e1e26 !important;
-      padding-top: 20px;
+      background-color: #13131a !important;
+      border-right: 1px solid #22222e !important;
+      padding-top: 24px;
     }
 
     .sidebar h1 a {
       color: #ffffff !important;
       font-weight: 800 !important;
-      font-size: 1.25rem !important;
+      font-size: 1.3rem !important;
       letter-spacing: -0.5px;
     }
 
     .sidebar ul li a {
       color: #94a3b8 !important;
-      font-size: 0.9rem !important;
+      font-size: 0.92rem !important;
       font-weight: 500 !important;
-      padding: 8px 12px !important;
+      padding: 8px 14px !important;
       border-radius: 6px;
-      transition: all 0.2s ease;
     }
 
     .sidebar ul li a:hover {
-      background-color: #1a1a24 !important;
+      background-color: #1e1e2a !important;
       color: #ffffff !important;
     }
 
     .sidebar ul li.active > a {
-      background-color: rgba(239, 68, 68, 0.15) !important;
+      background-color: rgba(239, 68, 68, 0.18) !important;
       color: #ef4444 !important;
       font-weight: 700 !important;
     }
 
-    /* Search Input */
+    /* Search Bar */
+    .search {
+      padding: 0 16px 16px 16px !important;
+      border-bottom: 1px solid #22222e;
+      margin-bottom: 16px;
+    }
+
     .search input {
-      background-color: #181820 !important;
-      border: 1px solid #272734 !important;
+      background-color: #1a1a24 !important;
+      border: 1px solid #2b2b3a !important;
       color: #ffffff !important;
       border-radius: 6px !important;
-      padding: 8px 12px !important;
+      padding: 9px 12px !important;
     }
 
     /* Content Area */
     .content {
-      background-color: #0b0b0e !important;
+      background-color: #0d0d12 !important;
     }
 
     .markdown-section {
-      max-width: 840px !important;
-      padding: 30px 40px !important;
+      max-width: 860px !important;
+      padding: 35px 45px !important;
     }
 
     .markdown-section h1 {
       color: #ffffff !important;
-      font-size: 2.1rem !important;
+      font-size: 2.2rem !important;
       font-weight: 800 !important;
-      border-bottom: 1px solid #1e1e26 !important;
-      padding-bottom: 10px;
+      border-bottom: 1px solid #22222e !important;
+      padding-bottom: 12px;
     }
 
     .markdown-section h2 {
       color: #f8fafc !important;
-      font-size: 1.4rem !important;
+      font-size: 1.45rem !important;
       font-weight: 700 !important;
       margin-top: 2em !important;
       border-bottom: none !important;
@@ -98,52 +105,52 @@
 
     .markdown-section p, .markdown-section li {
       color: #cbd5e1 !important;
-      line-height: 1.7 !important;
+      line-height: 1.75 !important;
+      font-size: 1rem !important;
     }
 
-    /* Callouts / Highlights */
     .markdown-section blockquote {
-      background-color: #14141c !important;
+      background-color: #161620 !important;
       border-left: 4px solid #ef4444 !important;
       border-radius: 0 6px 6px 0;
-      color: #e2e8f0 !important;
-      padding: 14px 18px !important;
-      margin: 1.5em 0 !important;
+      color: #f1f5f9 !important;
+      padding: 16px 20px !important;
+      margin: 1.8em 0 !important;
     }
 
-    /* Tables */
     .markdown-section table {
       width: 100% !important;
       border-collapse: collapse !important;
-      border: 1px solid #1e1e26 !important;
-      margin: 1.5em 0 !important;
+      border: 1px solid #22222e !important;
+      margin: 1.8em 0 !important;
     }
 
     .markdown-section th {
-      background-color: #161620 !important;
+      background-color: #181824 !important;
       color: #ef4444 !important;
       font-weight: 700 !important;
-      padding: 10px 14px !important;
-      border: 1px solid #1e1e26 !important;
+      padding: 12px 16px !important;
+      border: 1px solid #22222e !important;
     }
 
     .markdown-section td {
-      background-color: #101017 !important;
-      border: 1px solid #1e1e26 !important;
-      padding: 10px 14px !important;
+      background-color: #121219 !important;
+      border: 1px solid #22222e !important;
+      padding: 12px 16px !important;
     }
   </style>
 </head>
 <body>
-  <div id="app">Carregando Havena RP...</div>
+  <div id="app">Carregando Regras do Havena RP...</div>
   <script>
     window.$docsify = {
       name: 'HAVENA RP',
       loadSidebar: true,
       subMaxLevel: 2,
       auto2top: true,
+      relativePath: true,
       search: {
-        placeholder: 'Pesquisar nas regras...',
+        placeholder: 'Pesquisar regra...',
         noData: 'Nenhuma regra encontrada.',
         depth: 3
       }
